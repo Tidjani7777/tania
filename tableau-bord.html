@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b7a4b">
+  <title>Tableau de bord — MonBac</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="tableau-bord.html" class="brand">
+      <span class="logo">🎓</span>
+      <span class="brand-name">MonBac</span>
+    </a>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button id="theme-toggle" class="icon-btn" aria-label="Changer de thème">🌙</button>
+      <button id="btn-deconnexion" class="icon-btn" aria-label="Se déconnecter">↩︎</button>
+    </div>
+  </header>
+
+  <main class="auth-page" id="app">
+    <p class="auth-sub">Chargement…</p>
+  </main>
+
+  <script type="module" src="js/tableau-bord.js"></script>
+</body>
+</html>
