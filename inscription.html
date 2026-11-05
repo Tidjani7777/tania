@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b7a4b">
+  <title>Inscription — MonBac</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <span class="logo">🎓</span>
+      <span class="brand-name">MonBac</span>
+    </a>
+    <button id="theme-toggle" class="icon-btn" aria-label="Changer de thème">🌙</button>
+  </header>
+
+  <main class="auth-page">
+    <h1>Créer mon compte</h1>
+    <p class="auth-sub">C'est gratuit et ça prend 1 minute.</p>
+
+    <form id="form-inscription" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="prenom">Prénom</label>
+          <input id="prenom" name="prenom" type="text" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="nom">Nom</label>
+          <input id="nom" name="nom" type="text" required autocomplete="family-name">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="telephone">Téléphone</label>
+        <input id="telephone" name="telephone" type="tel" required
+               inputmode="tel" placeholder="77 123 45 67" autocomplete="tel">
+      </div>
+
+      <div class="field">
+        <label for="serie">Série</label>
+        <select id="serie" name="serie" required>
+          <option value="">— Choisir —</option>
+          <optgroup label="Séries scientifiques">
+            <option value="S1">S1</option>
+            <option value="S1A">S1A</option>
+            <option value="S2">S2</option>
+            <option value="S2A">S2A</option>
+            <option value="S3">S3</option>
+            <option value="S4">S4</option>
+            <option value="S5">S5</option>
+          </optgroup>
+          <optgroup label="Séries littéraires">
+            <option value="L1a">L1a</option>
+            <option value="L1b">L1b</option>
+            <option value="L1">L'1</option>
+            <option value="L2">L2</option>
+            <option value="LA">LA</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div id="bloc-langues" class="bloc-langues" hidden>
+        <div class="field">
+          <label for="lv1">LV1</label>
+          <select id="lv1" name="lv1">
+            <option value="anglais">Anglais</option>
+            <option value="allemand">Allemand</option>
+            <option value="espagnol">Espagnol</option>
+            <option value="italien">Italien</option>
+            <option value="portugais">Portugais</option>
+            <option value="russe">Russe</option>
+            <option value="arabe">Arabe</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="lv2">LV2 ou Économie générale</label>
+          <select id="lv2" name="lv2">
+            <option value="">— Choisir —</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sp_ou_svt">SP ou SVT</label>
+          <select id="sp_ou_svt" name="sp_ou_svt">
+            <option value="">— Choisir —</option>
+            <option value="SP">SP</option>
+            <option value="SVT">SVT</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+      </div>
+
+      <div class="field">
+        <label for="motdepasse">Mot de passe</label>
+        <input id="motdepasse" name="motdepasse" type="password" required minlength="6" autocomplete="new-password">
+        <small class="hint">Au moins 6 caractères.</small>
+      </div>
+
+      <div id="message" class="message" role="status" hidden></div>
+
+      <button type="submit" class="btn btn-primary btn-block" id="btn-submit">Créer mon compte</button>
+    </form>
+
+    <p class="auth-alt">Déjà un compte ? <a href="connexion.html">Se connecter</a></p>
+  </main>
+
+  <script type="module" src="js/inscription.js"></script>
+</body>
+</html>
