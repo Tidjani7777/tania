@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b7a4b">
+  <title>Connexion — MonBac</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <span class="logo">🎓</span>
+      <span class="brand-name">MonBac</span>
+    </a>
+    <button id="theme-toggle" class="icon-btn" aria-label="Changer de thème">🌙</button>
+  </header>
+
+  <main class="auth-page">
+    <h1>Se connecter</h1>
+    <p class="auth-sub">Content de te revoir.</p>
+
+    <form id="form-connexion" novalidate>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="motdepasse">Mot de passe</label>
+        <input id="motdepasse" name="motdepasse" type="password" required autocomplete="current-password">
+      </div>
+      <div id="message" class="message" role="status" hidden></div>
+      <button type="submit" class="btn btn-primary btn-block" id="btn-submit">Se connecter</button>
+    </form>
+
+    <p class="auth-alt">Pas encore de compte ? <a href="inscription.html">Créer un compte</a></p>
+  </main>
+
+  <script type="module" src="js/connexion.js"></script>
+</body>
+</html>
